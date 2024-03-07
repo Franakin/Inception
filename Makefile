@@ -2,10 +2,10 @@ VOL_WORDPRESS=/home/fpurdom/data/wordpress
 VOL_MARIADB=/home/fpurdom/data/mariadb
 
 all	: $(VOL_WORDPRESS) $(VOL_MARIADB)
-	docker compose -f ./srcs/docker-compose.yml up -d
+	docker-compose -f ./srcs/docker-compose.yml up -d
 
 down :
-	docker compose -f ./srcs/docker-compose.yml down
+	docker-compose -f ./srcs/docker-compose.yml down
 
 clean	:
 	rm -rf $(VOL_WORDPRESS)
